@@ -1,0 +1,266 @@
+
+    body{
+        background-color: #0a192f;
+    }
+    
+    header{
+        position: sticky;
+        top: 0; /* Detta gör att headern blir sticky när du scrollar */
+        width: 100%; /* Se till att headern täcker hela bredden */
+        background-color:#0a192f; /* Bakgrundsfärg så att headern syns över innehållet */
+        z-index: 1000; /* Sätter ett högre z-index för att headern ska vara ovanpå annat innehåll */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lägger till en liten skugga för bättre synlighet */
+        nav{
+            
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-left: 70%;
+            padding: 20px;
+            list-style-type:disc;
+           
+            li{
+                color: #8892b0;
+                
+            }
+            #resumeBtn{
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                border-radius: 5px;
+                position: relative; /* Behåll länkar i normal position */
+                transition: transform 0.3s ease; /* Smidig övergång vid transformering */
+                background-color: #0a192f;
+                color: #64ffda;
+                border:#64ffda 1px solid;
+                font-family: montserrat;
+                font-weight: 200;
+                cursor: pointer;
+                
+            }
+            }
+        }
+          
+        }
+    
+
+
+.intro{
+   .introDiv{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 150px;
+    margin-right: 150px;
+    .introDiv2{
+        padding: 50px;
+    }
+    .cvBild{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 50px;
+    }
+   }
+}
+.about-me{
+    .aboutMeDiv{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 150px;
+        margin-left: 150px;
+        
+    }
+   
+    
+    li{
+        color:#8892b0;
+    }
+    p{
+        border-bottom: #64ffda solid;
+        padding-bottom: 20px;
+    }
+}
+.myProjects{
+    #myProjects-title{
+        margin-bottom: 50px;
+    }
+    .myProjectsDiv{
+        display: flex;
+        flex-direction: column;
+       
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .project {
+            display: flex;
+            align-items: flex-start; /* Justerar bild och text vertikalt */
+            margin-bottom: 20px;
+            gap: 20px; /* Avstånd mellan bild och text */
+            text-align: center;
+        }
+        
+        
+        .project img {
+            width: 550px; /* Ställ in bredden på bilderna */
+            height: auto; /* Bevara bildens proportioner */
+            border-radius: 10px; /* Om du vill ha rundade hörn */
+        }
+        .project-a{
+            border-radius: 5px;
+            border: 1px #64ffda solid;
+            font-family: montserrat;
+            font-weight: lighter;
+            padding: 15px;
+            text-decoration: double;
+            margin: 5px;
+        }
+        
+        .project-info {
+            max-width: 600px; /* Sätt en maxbredd för texten */
+            background-color: #112240;
+            padding-bottom: 30px;
+            border-radius: 10px;
+         
+        }
+        
+        .project-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: montserrat;
+            color: #ccd6f6;
+        }
+        
+        .project-info p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .project-info a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: 200;
+            //margin-top: 5px;
+            display: inline-block;
+        }
+        
+        .project-info a:hover {
+            text-decoration: underline;
+        }
+        
+
+        img{
+             width: 650px;
+             height: 400px;
+            //object-fit: contain;
+        }
+        h3{
+            color:#8892b0;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden; /* För att säkerställa att effekten stannar inom bildens gränser */
+        }
+        
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            filter: sepia(2) hue-rotate(140deg) brightness(0.5) saturate(4); /* Anpassa filter för #64ffda färgton */
+            transition: filter 0.2s ease-in-out; /* Mjuk övergångseffekt vid hover */
+        }
+        
+        .image-container:hover img {
+            filter: none; /* Återställ till originalfärgen vid hover */
+        }
+
+        
+    }
+
+    
+}
+footer{ 
+    margin-top: 40px;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: center;
+    #footer-h1{
+        font-size: 2.5em;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        margin: 50px;
+        justify-content: center;
+        
+        gap: 10px;
+
+        .fa-brands{
+            font-size: xx-large;
+        }
+    }
+}
+
+h1{
+    font-family: Montserrat;
+    color:#ccd6f6;
+    font-weight:bold;
+    font-size: 4em;
+    margin: 0;
+   
+}
+h2{
+    font-family: Montserrat;
+    color: #64ffda;
+    font-weight: 200;
+    
+}
+
+p{
+    font-family: Montserrat;
+    color: #8892b0;
+}
+li{
+    font-family: montserrat;
+}
+li::marker{
+    color: #64ffda;
+    
+}
+a{
+    text-decoration: none;
+    color: #8892b0;
+    position: relative; /* Behåll länkar i normal position */
+    transition: transform 0.3s ease; /* Smidig övergång vid transformering */
+}
+a:hover{
+    transform: translateY(-5px); /* Flyttar länken 5px uppåt */
+    color: #64ffda;
+}
+#myName{
+    color: white;
+}
+#footer-button{
+    background-color: #0a192f;
+    color: #64ffda;
+    border:#64ffda 1px solid;
+    font-family: montserrat;
+    font-weight: 200;
+    font-size: large;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative; /* Behåll länkar i normal position */
+    transition: transform 0.3s ease; /* Smidig övergång vid transformering */
+    margin-top: 20px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform: translateY(-5px); /* Flyttar länken 5px uppåt */
+    
+
+}
