@@ -28,6 +28,43 @@
                     <a href="">Resume</a>
                 </li> -->
                 <button id="resumeBtn">Resume</button>
+
+                <!-- Modal som visas när knappen trycks -->
+<div id="resumeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.8);">
+    <div style="position:relative; width:80%; height:80%; margin: auto; background-color:black; padding:20px;">
+      <span id="closeModal" style="position:absolute; top:10px; right:20px; cursor:pointer; font-size:24px;">&times;</span>
+      <iframe src="./files/cv.pdf" width="100%" height="100%"></iframe>
+    </div>
+  </div>
+  
+  <script>
+    // Hämta knappen och modal-elementen
+    const resumeBtn = document.getElementById("resumeBtn");
+    const resumeModal = document.getElementById("resumeModal");
+    const closeModal = document.getElementById("closeModal");
+  
+    // Visa modal när knappen trycks
+    resumeBtn.addEventListener("click", function() {
+      resumeModal.style.display = "block";
+    });
+  
+    // Stäng modal när man trycker på stäng-knappen
+    closeModal.addEventListener("click", function() {
+      resumeModal.style.display = "none";
+    });
+  
+    // Stäng modal när man klickar utanför modalfönstret
+    window.addEventListener("click", function(event) {
+      if (event.target == resumeModal) {
+        resumeModal.style.display = "none";
+      }
+    });
+  </script>
+                <!-- <script>
+                    document.getElementById("resumeBtn").addEventListener("click", function() {
+                      window.open("./files/cv.pdf", "_blank");
+                    });
+                  </script> -->
             </ul>
         </nav>
     </header>
@@ -68,6 +105,7 @@
                 <li>JavaScript</li>
                 <li>Figma</li>
                 <li>Git</li>
+                <li>Next.js</li>
              </ul>
     </div>
 </section>
@@ -119,7 +157,7 @@
             </div>
             <div class="project-info">
                 <h3>Productivity assistant application</h3>
-                <p>We developed an application designed to boost productivity in everyday life. The app allows users to manage daily routines, track tasks, and support focused work sessions. Users need to be logged in to access the features, ensuring a personalized experience and secure data management. The project was carried out using agile methodologies, allowing our team to work iteratively and collaboratively.(HTML, Sass, JavaScript)</p>
+                <p>In another school project, we developed an application designed to boost productivity in everyday life. The app allows users to manage daily routines, track tasks. Users need to be logged in to access the features, ensuring a personalized experience and secure data management. The project was carried out using agile methodologies.(HTML, Sass, JavaScript)</p>
                 <a class="project-a" href="https://senay1675.github.io/Projektarbete---Productivity-assistant-application/" target="_blank">View Project</a>
 
             </div>
