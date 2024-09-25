@@ -264,3 +264,68 @@ button:hover{
     
 
 }
+
+/* Stilar för mobiler (skärmar mindre än 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        margin: 0;
+    }
+    
+    header {
+        nav ul {
+            flex-direction: column; /* Gör navigationsmenyn vertikal på små skärmar */
+            align-items: center;
+            margin-left: 0;
+        }
+    }
+    
+    .intro .introDiv {
+        flex-direction: column; /* Ändra till kolumn på små skärmar */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .intro .cvBild {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+    
+    .about-me .aboutMeDiv {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .myProjects .myProjectsDiv {
+        flex-direction: column; /* Ställer in projekten vertikalt */
+        padding: 10px;
+    }
+
+    .myProjects .project img {
+        width: 100%; /* Låter bilden ta upp hela bredden på små skärmar */
+    }
+
+    .myProjects .project-info {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    footer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #footer-button {
+        padding: 10px;
+        font-size: medium;
+    }
+
+    h1 {
+        font-size: 3em; /* Minska storleken på rubrikerna på små skärmar */
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
