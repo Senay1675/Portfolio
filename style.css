@@ -233,6 +233,19 @@ button:hover {
 
 /* Stilar för mobiler (skärmar mindre än 768px) */
 @media (max-width: 768px) {
+  .myProjects .project {
+    display: flex;
+    flex-direction: column; /* Gör så att innehållet staplas vertikalt */
+  }
+
+  .myProjects .image-container {
+    order: 1; /* Första elementet i kolumnen */
+  }
+
+  .myProjects .project-info {
+    order: 2; /* Andra elementet i kolumnen */
+    margin-top: 10px; /* Lägg till lite mellanrum mellan bilden och infon */
+  }
   body {
     font-size: 14px;
     margin: 0;
