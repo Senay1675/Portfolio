@@ -10,11 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
+        
+        <nav id="menu" class="menu">
+            <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</div>
+
+            <ul id="nav-links">
                 <li>
                     <a href="#about">About</a>
                 </li>
@@ -58,7 +65,34 @@
       if (event.target == resumeModal) {
         resumeModal.style.display = "none";
       }
+
+
+      
     });
+
+    
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    const overlay = document.getElementById("overlay");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+
+  // (valfritt) för bättre a11y
+  const expanded = hamburger.getAttribute("aria-expanded") === "true";
+  hamburger.setAttribute("aria-expanded", String(!expanded));
+    });
+
+
+
+// Stäng menyn om man klickar på overlay
+overlay.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+  hamburger.setAttribute("aria-expanded", "false");
+});
+  
   </script>
                 <!-- <script>
                     document.getElementById("resumeBtn").addEventListener("click", function() {
@@ -77,7 +111,7 @@
         <div class= "introDiv2">
             <h2>Hi! my name is</h2>
             <h1 id="myName"> Senay Hakin.</h1>
-            <h1>I'm a Frontend developer Student </h1>
+            <h1>I'm a Frontend developer</h1>
             <p>A passionate Frontend Developer with a knack for creating engaging and user-friendly web experiences. With a strong foundation in HTML, CSS, and JavaScript,
                  I bring ideas to life through clean, efficient, and visually appealing code. </p>
             
@@ -98,20 +132,44 @@
              Feel free to dive in and explore my projects, and don't hesitate to reach out if you have any questions or opportunities you'd like to discuss. Thank you for visiting my portfolio!</p>
 
              <h2>My Skills</h2>
+                <div class="knowledge-listDiv">
+                    <ul class="knowledge-list">
+                       <li>Html</li>
+                       <li>CSS</li>
+                       <li>JavaScript</li>
+                       <li>Figma</li>
+                       <li>Git</li>     
+                    </ul>
+       
+                    <ul class="knowledge-list">
+                       <li>React</li>
+                       <li>TypeScript</li>
+                       <li>Node.js</li>
+                       <li>Wordpress</li>
+                       <li>REST API</li>
+                    </ul>
 
-             <ul class="knowledge-list">
-                <li>Html</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Figma</li>
-                <li>Git</li>
-                <li>Next.js</li>
-             </ul>
+                </div>
     </div>
 </section>
 <section class="myProjects" id="projectLink">
     <div class="myProjectsDiv">
         <h2 id="myProjects-title">My projects</h2>
+
+        <div class="project">
+            <div class="image-container">
+                <img src="images/meritvarde.png" alt="meritvärde">
+                <div class="color-overlay"></div>
+            </div>
+            <div class="project-info">
+                <h3>Meritvärde</h3>
+                <p>
+                    During my internship at studeravidare.se, I developed a merit value application that helps high school students calculate their grades and see university program suggestions based on their scores. (Node.js, TypeScript, Vite, Express.js, REST API, Render)
+                </p>
+               
+                <a class="project-a" href="https://studeravidare.github.io/meritvarde/" target="_blank">View Project</a>
+            </div>
+        </div>
 
         <div class="project">
             <div class="image-container">
@@ -124,12 +182,13 @@
                     The task we received in school was to create an application where users can manage various credit cards. The goal was to build a system that allows users to add, view, edit, and remove their credit card information in a secure and organized way. (React, React router, Vite)
                 </p>
                
-                <a class="project-a" href="https://github.com/Senay1675/Bank.Card-project" target="_blank">View Project</a>
+                <a class="project-a" href="https://senay1675.github.io/Bank.Card-project/" target="_blank">View Project</a>
             </div>
         </div>
 
         <!-- ny rad -->
        
+        
         <div class="project">
             <div class="image-container">
                 <img src="./images/Skarmavbild.koiNoodle.png" alt="Koi noodle">
@@ -138,7 +197,7 @@
             <div class="project-info">
                 <h3>Project Ramen</h3>
                 <p>In a school project, we were assigned to create a website. My group chose to build a site for a ramen restaurant, focusing on a modern design that highlights the menu and atmosphere (HTML, CSS, Sass).</p>
-               
+                
                 <a class="project-a" href="https://charleslindberg.github.io/projectRamen/kontakt.html" target="_blank">View Project</a>
             </div>
         </div>
@@ -167,18 +226,7 @@
             </div>
         </div>
 
-        <div class="project">
-            <div class="image-container">
-                <img src="./images/Skarmavbild.productivityApp.png" alt="Project Image">
-                <div class="color-overlay"></div>
-            </div>
-            <div class="project-info">
-                <h3>Productivity assistant application</h3>
-                <p>In another school project, we developed an application designed to boost productivity in everyday life. The project was carried out using agile methodologies.(HTML, Sass, JavaScript)</p>
-                <a class="project-a" href="https://senay1675.github.io/Projektarbete---Productivity-assistant-application/" target="_blank">View Project</a>
-
-            </div>
-        </div>
+      
        
     </div>
 </section>
